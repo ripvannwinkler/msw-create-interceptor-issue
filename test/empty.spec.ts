@@ -1,8 +1,7 @@
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 
-const server = setupServer(
-	// Describe the requests to mock.
+const handlers = [
 	rest.get('/book/:bookId', (req, res, ctx) => {
 		return res(
 			ctx.json({
@@ -11,7 +10,9 @@ const server = setupServer(
 			}),
 		);
 	}),
-);
+]
+
+const server = setupServer(...handlers);
 
 beforeAll(() => {
 	// Establish requests interception layer before all tests.

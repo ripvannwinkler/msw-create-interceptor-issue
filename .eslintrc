@@ -1,0 +1,44 @@
+{
+	"env": {
+		"browser": true,
+		"es2020": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": ["@typescript-eslint", "prettier", "sort-imports-es6-autofix"],
+	"rules": {
+		"@typescript-eslint/consistent-type-imports": "error",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"max-len": ["off", 120],
+		"prettier/prettier": "off",
+		"sort-imports-es6-autofix/sort-imports-es6": [
+			"error",
+			{
+				"ignoreCase": false,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+			}
+		]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}

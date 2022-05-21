@@ -1,0 +1,23 @@
+{
+  "name": "fetchutils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/core": "^1.2.187",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "msw": "^0.40.2"
+  },
+  "dependencies": {
+    "typescript": "^4.6.4"
+  }
+}
